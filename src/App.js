@@ -7,7 +7,7 @@ import {
   spriteFrames,
   sceneryTimingBackground,
   sceneryTimingForeground,
-  spirteTiming,
+  spriteTiming,
 } from "./AnimationData";
 import { useEffect } from "react";
 
@@ -33,7 +33,7 @@ function App() {
 
   const redQueen_alice = useWebAnimations({
     keyframes: spriteFrames,
-    timing: spirteTiming,
+    timing: spriteTiming,
   });
 
   const sceneries = [
@@ -48,16 +48,17 @@ function App() {
     else {
       if (redQueen_alice.getAnimation().playbackRate < 0.8) {
         sceneries.forEach(function (anim) {
-          anim.playbackRate =
-            (redQueen_alice.getAnimation().playbackRate / 2) * -1;
+          anim.getAnimation().playbackRate =
+            (redQueen_alice.getAnimation().playbackRate / 3) * -1;
         });
       } else if (redQueen_alice.getAnimation().playbackRate > 1.2) {
         sceneries.forEach(function (anim) {
-          anim.playbackRate = redQueen_alice.getAnimation().playbackRate / 2;
+          anim.getAnimation().playbackRate =
+            redQueen_alice.getAnimation().playbackRate / 3;
         });
       } else {
         sceneries.forEach(function (anim) {
-          anim.playbackRate = 0;
+          anim.getAnimation().playbackRate = 0;
         });
       }
     }

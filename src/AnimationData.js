@@ -31,7 +31,7 @@ export const sceneryTimingForeground = {
   iterations: Infinity,
 };
 
-export const spirteTiming = {
+export const spriteTiming = {
   easing: "steps(7, end)",
   direction: "reverse",
   duration: 600,
