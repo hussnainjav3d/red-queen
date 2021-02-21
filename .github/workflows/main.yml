@@ -28,12 +28,14 @@ jobs:
           node-version: 12
 
       - name: Installing Yarn
-        uses: borales/actions-yarn@v2.0.0
+        uses: Borales/actions-yarn@v2.3.0
         with:
           cmd: install
 
       - name: Building Projects
-        run: yarn build
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: build
       # Runs a set of commands using the runners shell
       - name: Installing Surge To Deploy
         run: npm install -g surge
