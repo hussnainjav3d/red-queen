@@ -49,12 +49,12 @@ function App() {
       if (redQueen_alice.getAnimation().playbackRate < 0.8) {
         sceneries.forEach(function (anim) {
           anim.getAnimation().playbackRate =
-            (redQueen_alice.getAnimation().playbackRate / 3) * -1;
+            (redQueen_alice.getAnimation().playbackRate / 2) * -1;
         });
       } else if (redQueen_alice.getAnimation().playbackRate > 1.2) {
         sceneries.forEach(function (anim) {
           anim.getAnimation().playbackRate =
-            redQueen_alice.getAnimation().playbackRate / 3;
+            redQueen_alice.getAnimation().playbackRate / 2;
         });
       } else {
         sceneries.forEach(function (anim) {
